@@ -21,7 +21,7 @@ jobs:
           script: |
              const fs = require('fs').promises;
 
-             const schema = await fs.readFile('.github/workflows/tsc_members_validator/Based_data.json', 'utf8');
+             const schema = await fs.readFile('Based_data.json', 'utf8');
              const members = await fs.readFile('TSC_MEMBERS.json', 'utf8');
 
              var valid = Object.toJSON(schema) == Object.toJSON(members);
