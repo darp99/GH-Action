@@ -18,7 +18,7 @@ jobs:
       - name: Validate list with schema
         uses: actions/github-script@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUBTOKEN }}
           script: |
              const fs = require('fs').promises;
 
