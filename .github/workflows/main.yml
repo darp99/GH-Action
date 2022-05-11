@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions-ecosystem/action-create-comment@v1
-        if: ${{ startsWith(github.event.comment.body, '/hello') }}
+        if: ${{ startsWith(github.event.comment.body, '/hello','/hi') }}
         with:
           github_token: ${{ secrets.GITHUBTOKEN }}
           body: |
-            Hello, @${{ github.actor }}!
+            Hello, @${{ github.actor }}! Welocme to are organization.
