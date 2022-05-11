@@ -17,9 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Validate list with schema
         uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUBTOKEN }}
-          script: |
+        script: |
              const fs = require('fs').promises;
 
              const schema = await fs.readFile('Based_data.json', 'utf8');
